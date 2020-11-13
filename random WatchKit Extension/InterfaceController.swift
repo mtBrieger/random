@@ -6,13 +6,32 @@
 //
 
 import WatchKit
-import Foundation
+import SpriteKit
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet weak var skInterface: WKInterfaceSKScene!
+    var scene: SKScene? = nil
 
+    @IBAction func onTap(_ sender: Any) {
+        if let gs = scene as? GameScene {
+            gs.reset()
+        }
+    }
+    
     override func awake(withContext context: Any?) {
-        // Configure interface objects here.
+        if let gs = GameScene(fileNamed: "GameScene") {
+            scene = gs
+            
+            crownSequencer.focus()
+            
+            // Set the scale mode to scale to fit the window
+            gs.scaleMode = .aspectFill
+            
+            // Present the scene
+            self.skInterface.presentScene(scene)
+        }
     }
     
     override func willActivate() {
