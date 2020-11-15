@@ -18,6 +18,8 @@
 		6EA921C4255EA453005E71A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA921C3255EA453005E71A6 /* Assets.xcassets */; };
 		6EA921D8255EA4F8005E71A6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA921D7255EA4F8005E71A6 /* GameScene.swift */; };
 		6EA921DD255EAA50005E71A6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EA921DC255EAA50005E71A6 /* GameScene.sks */; };
+		6ED6E443256159A700FD2014 /* empty trash.aif in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6E4362561575900FD2014 /* empty trash.aif */; };
+		6ED6E44A256159AC00FD2014 /* Media Keys.aif in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6E43B2561591300FD2014 /* Media Keys.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		6EA921C6255EA453005E71A6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		6EA921D7255EA4F8005E71A6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6EA921DC255EAA50005E71A6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6ED6E4362561575900FD2014 /* empty trash.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "empty trash.aif"; sourceTree = "<group>"; };
+		6ED6E43B2561591300FD2014 /* Media Keys.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Media Keys.aif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			children = (
 				6EA921AC255EA44D005E71A6 /* Interface.storyboard */,
 				6EA921AF255EA451005E71A6 /* Assets.xcassets */,
+				6ED6E4362561575900FD2014 /* empty trash.aif */,
+				6ED6E43B2561591300FD2014 /* Media Keys.aif */,
 				6EA921B1255EA451005E71A6 /* Info.plist */,
 			);
 			path = "random WatchKit App";
@@ -251,7 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED6E44A256159AC00FD2014 /* Media Keys.aif in Resources */,
 				6EA921DD255EAA50005E71A6 /* GameScene.sks in Resources */,
+				6ED6E443256159A700FD2014 /* empty trash.aif in Resources */,
 				6EA921C4255EA453005E71A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +509,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NQD2AZWRN5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brieger.random;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,7 +522,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NQD2AZWRN5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brieger.random;
 				PRODUCT_NAME = "$(TARGET_NAME)";
