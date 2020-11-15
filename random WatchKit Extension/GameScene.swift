@@ -15,11 +15,8 @@ class GameScene: SKScene, WKCrownDelegate {
     var array:[CGPoint] = []
     var lines:SKShapeNode = SKShapeNode()
     
-    let clickSoundAction = SKAction.playSoundFileNamed("Media Keys.aif", waitForCompletion: false)
 
     override func sceneDidLoad() {
-        // This method is called once at the beginning like `setup()` on Arduino
-        
         crownSequencer.delegate = self
         crownSequencer.focus()
         
@@ -29,14 +26,11 @@ class GameScene: SKScene, WKCrownDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // This method is called every frame like `loop()` on Arduino
+        // This method is called every frame
     }
     
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
-        // This method is called when the crown is rotated, use `rotationalDelta` to reduce sensitivity
-        
-        WKInterfaceDevice.current().play(.click)
-        lines.run(clickSoundAction)
+        // This method is called when the crown is rotated
         
         let nextPoint = array[(index+1) % array.count]
         drawLine(from: array[index], to: nextPoint)
@@ -45,13 +39,13 @@ class GameScene: SKScene, WKCrownDelegate {
     }
     
     func generateLines() {
-        let width2 = Int(self.size.width/2)
-        let height2 = Int(self.size.height/2)
+        let width = Int(self.size.width)
+        let height = Int(self.size.height)
         
-        array = []
+        print(width, height)
         
         for _ in 0..<256 {
-            let point = CGPoint(x: Int.random(in: -width2..<width2), y: Int.random(in: -height2..<height2))
+            let point = CGPoint(x: Int.random(in: -width..<width), y: Int.random(in: -height..<height))
             array.append(point)
         }
     }
@@ -60,9 +54,6 @@ class GameScene: SKScene, WKCrownDelegate {
         lines.removeAllChildren()
         index = 0
         generateLines()
-        
-        let soundAction = SKAction.playSoundFileNamed("empty trash.aif", waitForCompletion: false)
-        lines.run(soundAction)
     }
 
     
